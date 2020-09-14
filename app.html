@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css"/>
+    <script src="jogo.js"></script>
+    <title>Caça Rato</title>
+</head>
+<body onresize="ajustaTela()">
+
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="imagens/queijo.png" alt="">
+            <img id="v2" src="imagens/queijo.png" alt="">
+            <img id="v3" src="imagens/queijo.png" alt="">
+
+        </div>
+        <div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
+
+    </div>
+
+        <audio id="somClick">
+             <source src="som/fxrato.mp3" type="audio/mpeg">
+        </audio>
+    <script> 
+        
+        document.getElementById("cronometro").innerHTML = tempo;
+
+        var criaRato = setInterval(function(){
+            posicaoRandomica()}, criaRatoTempo); 
+
+        
+    
+    </script>
+</body>
+
+</html>
